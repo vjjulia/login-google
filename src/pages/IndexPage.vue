@@ -1,45 +1,92 @@
 <template>
-<div class="main flex flex-center">
-  <q-card class="flex form-login">
-    <div class="img-logo">
-     <img
-        alt="imagem-google"
-        src="~assets/logo.png"
-       style="width: 90px; height: 34px" >
+<div class="main">
+  <q-card class="flex container-login">
+    <div class="container-logo">
+      <img class="image-logo" src="~assets/logo.png">
+    </div>
+    <div class="container-texto-login">
+        <h1 class="texto-login">Login</h1>
+    </div>
+    <div class="container-gmail">
+        <h5 class="texto-gmail">Ir para o Gmail</h5>
+    </div>
+    <div class="container-components">
+        <q-input class="component" outlined v-model="text" label="E-mail ou telefone" />
     </div>
   </q-card>
 </div>
 </template>
 <style>
 .main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background: #fff;
   height: 100vh;
   width: 100vw;
 }
 
-.form-login {
+.container-login {
   height: 500px;
-  width: 350px;
-  margin: auto;
+  width: 430px;
+  border-radius: 8px;
+  padding: 8px;
 }
 
-.img-logo {
-  margin-top: 30px;
-}
-/*
-.imagem-login-gmail {
-  margin: auto 550px;
-}
-
-.email-telefone {
-  margin-bottom: auto 300px;
+.container-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100vw;
 }
 
-.item { width: 500px;
-  height: 500px;
-  border: 1px solid black;
-  margin-left: 500px;
-  margin-top: 10px;
+.image-logo {
+  width: 20%;
 }
-*/
+
+.container-texto-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100vw;
+  margin-top: 100px;
+}
+
+.texto-login {
+  margin-bottom: 375px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.container-gmail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100vw;
+}
+
+.texto-gmail {
+  margin-bottom: 530px;
+  font-size: 20px;
+}
+
+.container-components {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.component {
+  margin-top: -500px;
+  width: 380px;
+}
 </style>
